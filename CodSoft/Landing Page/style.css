@@ -1,0 +1,203 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: "DM Sans", sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#250001;
+}
+
+header{
+    background:#250001;
+    padding:20px 8%;
+    position:sticky;
+    top:0;
+    z-index:10;
+}
+
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo{
+    color:white;
+    font-size:28px;
+}
+
+ul{
+    display:flex;
+    list-style:none;
+}
+
+ul li{
+    margin-left:30px;
+}
+
+ul li a{
+    color:white;
+    text-decoration:none;
+    font-size:16px;
+}
+
+ul li a:hover{
+    color:#FCBA04;
+}
+
+.hero{
+    min-height:90vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    background:
+    linear-gradient( rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+    url("https://images.pexels.com/photos/14553704/pexels-photo-14553704.jpeg");
+    background-size:cover;
+    background-position:center;
+    color:white;
+}
+
+.content{
+    animation:slide 1.5s ease;
+}
+
+.content h1{
+    font-size:55px;
+    margin-bottom:20px;
+}
+
+.content p{
+    font-size:20px;
+    max-width:600px;
+    margin:auto;
+    margin-bottom:30px;
+}
+
+button{
+    padding:15px 40px;
+    border:none;
+    border-radius:30px;
+    background:#FCBA04;
+    color:black;
+    font-size:18px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+button:hover{
+    transform:scale(1.1);
+    background:#A50104;
+    color: white;
+}
+
+.about{
+    padding:70px 10%;
+    text-align:center;
+    color: white;
+}
+
+.about h2,
+.features h2,
+.contact h2{
+    font-size:35px;
+    margin-bottom:20px;
+}
+
+.features{
+    padding:70px 10%;
+    text-align:center;
+    color: white;
+}
+
+.cards{
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    flex-wrap:wrap;
+}
+
+.card{
+    background:#590004;
+    width:280px;
+    padding:35px;
+    border-radius:20px;
+    box-shadow:
+    0 10px 25px rgba(0,0,0,0.1);
+    transition:.4s;
+}
+
+.card:hover{
+    transform:translateY(-15px);
+    box-shadow: 0 6px 25px #FCBA04;
+}
+
+.card h3{
+    margin-bottom:15px;
+    color:#F3F3F3;
+}
+
+.contact{
+    padding:70px 10%;
+    text-align:center;
+    background:#250001;
+    color: white;
+}
+
+footer{
+    background:#250001;
+    color:white;
+    text-align:center;
+    padding:25px;
+}
+
+@keyframes slide{
+from{
+    opacity:0;
+    transform:translateY(50px);
+}
+to{
+    opacity:1;
+    transform:translateY(0);
+}
+}
+
+section{
+    opacity:0;
+    transform:translateY(50px);
+    transition:1s;
+}
+
+.hero{
+    opacity:1;
+    transform:none;
+}
+
+@media(max-width:768px){
+nav{
+    flex-direction:column;
+}
+
+ul{
+    margin-top:20px;
+}
+
+.content h1{
+    font-size:35px;
+}
+
+.cards{
+    flex-direction:column;
+    align-items:center;
+}
+
+}
